@@ -1,0 +1,19 @@
+<div style="display: flex;flex-direction: row;">
+    <div style="display: flex;flex-direction: column;width: 260px;">
+        <client-list ref="client_list" @selected_target="selectedTargetHandler"></client-list>
+        <video muted style="width: 240px;height: 180px;" ref="localPreview" autoplay controls></video>
+    </div>
+    <div class="card" style="margin-left: 10px;flex: 1;">
+        <div class="card-header">
+            <span v-if="targetSocketId">
+            {{targetSocketId}}
+            </span>
+            <span v-else>
+                No target socket id
+            </span>
+        </div>
+        <div class="card-body">
+            <video style="width: 480px;height: 320px;" ref="remotePreview" muted controls autoplay></video>
+        </div>
+    </div>
+</div>

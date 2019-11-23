@@ -1,0 +1,21 @@
+<div style="display: flex;flex-direction: row;">
+    <client-list ref="client_list" @selected_target="selectedTargetHandler"></client-list>
+    <div class="card" style="margin-left: 10px;flex: 1;">
+        <div class="card-header">
+            <span v-if="targetSocketId">
+            {{targetSocketId}}
+            </span>
+            <span v-else>
+                No target socket id
+            </span>
+        </div>
+        <div class="card-body">
+            <textarea style="width: 100%;height: 200px;resize: none;" ref="output" v-model="outputMsg"
+                      class="form-control" readonly></textarea>
+            <form style="margin-top: 10px;display: flex;flex-direction: row;" @submit="submitHandler">
+                <input style="flex: 1;" type="text" name="msg" required class="form-control">
+                <input class="btn btn-primary" style="margin-left: 10px" type="submit" value="发送">
+            </form>
+        </div>
+    </div>
+</div>

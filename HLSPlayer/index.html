@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="hls.js"></script>
+</head>
+<body>
+<video width="400" height="300" controls></video>
+
+<script>
+
+    let video = document.querySelector("video");
+
+    if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = 'video/master.m3u8';
+        video.addEventListener('loadedmetadata', function () {
+            video.play();
+        });
+        console.log("硬解");
+    } else if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource('video/master.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+            video.play();
+        });
+        console.log("软解");
+    } else {
+        alert("不支持播放该视频");
+    }
+</script>
+</body>
+</html>

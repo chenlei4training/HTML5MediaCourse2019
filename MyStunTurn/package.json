@@ -1,0 +1,10 @@
+{
+  "name": "my-stun-turn",
+  "version": "1.0.0",
+  "scripts": {
+    "install_stun": "npm install --save stun"
+  },
+  "dependencies": {
+    "stun": "^2.0.0"
+  }
+}

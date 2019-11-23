@@ -1,0 +1,11 @@
+<div class="card" style="width: 260px;height: 100%;">
+    <div class="card-header">
+        客户端列表
+    </div>
+    <div>
+        <button @click="targetSocketIDClicked" style="width: 100%;" class="btn btn-outline-dark btn-sm"
+                v-for="k in clients.keys()" :data-socket_id="k">
+            {{getSocketIdLabel(k)}}
+        </button>
+    </div>
+</div>
