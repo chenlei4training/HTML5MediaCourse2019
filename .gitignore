@@ -10,3 +10,5 @@
 *.m3u8
 node_modules
 out
+html-template
+fp_plugin

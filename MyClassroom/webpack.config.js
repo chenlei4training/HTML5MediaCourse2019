@@ -9,5 +9,15 @@ module.exports = {
     output: {
         path: path.join(__dirname, "public"),
         filename: "[name].js"
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.(html)$/,
+                use: 'html-loader'
+            }
+        ]
     }
+
 };

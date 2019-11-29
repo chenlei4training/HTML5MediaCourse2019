@@ -8,6 +8,8 @@ p.stderr.on("data", data => {
     str += data.toString();
 });
 p.on("close", code => {
+    console.log(str);
+
     let re = /\[[^\]]+] ([^\n]+)\n/g;
     let devices = {videoDevices: [], audioDevices: []};
     let currentArray = devices.videoDevices;

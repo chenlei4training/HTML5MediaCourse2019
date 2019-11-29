@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "install_socketio": "npm install --save socket.io",
     "install_webpack": "npm install --save-dev webpack webpack-cli",
-    "build": "webpack"
+    "build": "webpack",
+    "build_and_watch": "webpack --watch"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
