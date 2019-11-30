@@ -1,5 +1,7 @@
 # HTML5MediaCourse2019 
 
+视频教程 [https://yunp.top/p/v/1513](https://yunp.top/p/v/1513)
+
 # 课程目录 
 
 | 课程 | 课时 |
